@@ -79,21 +79,119 @@ def choose_best_rem_start(pages: List[str]) -> Optional[int]:
     return best_idx
 
 
-def find_end_page(pages, start_idx, max_pages=30):
+import re
+from typing import List, Optional
+
+
+# Words/phrases that strongly suggest we are still in the remuneration / pay section
+REM_KEYWORDS = [
+    r"\bremuneration\b",
+    r"\bcompensation\b",
+    r"\bdirectors'? remuneration\b",
+    r"\bexecutive remuneration\b",
+    r"\bmanaging board\b",
+    r"\bsupervisory board\b",
+    r"\bboard remuneration\b",
+    r"\bnon[- ]executive director\b",
+    r"\bbase salary\b",
+    r"\bannual fixed salary\b",
+    r"\bbonus\b",
+    r"\bshort[- ]term incentive\b",
+    r"\blong[- ]term incentive\b",
+    r"\bltip\b",
+    r"\bstip\b",
+    r"\btotal cash\b",
+    r"\bpay ratio\b",
+    r"\btermination benefit\b",
+    r"\bseverance\b",
+]
+
+# Words/phrases that strongly suggest we've moved on to another big section
+BREAK_KEYWORDS = [
+    r"\bconsolidated financial statements\b",
+    r"\bseparate financial statements\b",
+    r"\bfinancial statements\b",
+    r"\bnotes to the (consolidated )?financial statements\b",
+    r"\bindependent auditor'?s report\b",
+    r"\bauditor'?s report\b",
+    r"\brisk management\b",
+    r"\brisk factors\b",
+    r"\bcorporate responsibility\b",
+    r"\bsustainability report\b",
+    r"\bnon[- ]financial statement\b",
+    r"\bmanagement report\b",
+    r"\bselected financial information\b",
+]
+
+
+def _score_page(text: str) -> tuple[int, int]:
     """
-    Scan forward until we hit:
-    - clear start of Financial Statements / Auditors' report, OR
-    - section '5.' (next chapter), OR
-    - we hit max_pages after start_idx.
+    Return (rem_score, break_score) for a page:
+    - rem_score: how 'remuneration-like' it is
+    - break_score: how much it looks like we've moved into another major section
+    """
+    lower = text.lower()
+
+    rem_score = 0
+    for pat in REM_KEYWORDS:
+        rem_score += len(re.findall(pat, lower))
+
+    break_score = 0
+    for pat in BREAK_KEYWORDS:
+        break_score += len(re.findall(pat, lower))
+
+    return rem_score, break_score
+
+
+def find_end_page(
+    pages: List[str],
+    start_idx: int,
+    max_pages: int = 40,
+    min_pages: int = 3,
+    max_gap_without_rem: int = 3,
+) -> int:
+    """
+    Heuristic, issuer-agnostic end-of-remuneration-section detector.
+
+    Strategy:
+    - Walk forward from start_idx.
+    - Track the last page index that still looks 'remuneration-like'.
+    - If we see several pages in a row with no remuneration signal AND
+      we see one or more strong 'break' cues (financial statements, auditor, risk, etc.),
+      we assume the remuneration section has ended.
+    - Also stop if we hit max_pages after start_idx.
+
+    Returns the index of the *last remuneration page* (0-based).
     """
     last_idx = min(len(pages) - 1, start_idx + max_pages)
-    for idx in range(start_idx + 1, last_idx + 1):
-        lower = pages[idx].lower()
-        if ("financial statements" in lower 
-            or "independent auditor" in lower 
-            or re.search(r"^\s*5\.\d", lower, flags=re.MULTILINE)):
-            return idx - 1
-    return last_idx
+    last_rem_like_idx = start_idx
+
+    gap_without_rem = 0
+
+    for idx in range(start_idx, last_idx + 1):
+        text = pages[idx] or ""
+        rem_score, break_score = _score_page(text)
+
+        # Treat this as 'remuneration-like' if we see any relevant words at all
+        if rem_score > 0:
+            last_rem_like_idx = idx
+            gap_without_rem = 0
+        else:
+            gap_without_rem += 1
+
+        # Only consider breaking once we've gone past a minimum number of pages
+        if idx >= start_idx + min_pages:
+            # Heuristic break condition:
+            # - we've gone several pages without any remuneration signals
+            # - AND we see at least one strong break cue on this page
+            if gap_without_rem >= max_gap_without_rem and break_score > 0:
+                # End just before current 'new section' page
+                return max(last_rem_like_idx, start_idx)
+
+    # Fallback: no clear break found, return last rem-like page we saw
+    return max(last_rem_like_idx, start_idx)
+
+
 
 
 

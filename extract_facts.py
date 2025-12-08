@@ -61,7 +61,7 @@ def extract_facts_from_report(report_text: str) -> Dict[str, Any]:
                 "content": build_extraction_user_prompt(report_text, FACT_SCHEMA)
             }
         ],
-        temperature=0.1,
+        temperature=1,
     )
 
     content = response.choices[0].message.content
@@ -72,6 +72,15 @@ def extract_facts_from_report(report_text: str) -> Dict[str, Any]:
         raise ValueError(f"Model returned invalid JSON: {content[:500]}")
 
     return data
+
+def compute_ceo_salary_increase_pct(facts):
+    hist = facts.get("ceo_salary_history", [])
+    by_year = {row["year"]: row["amount"] for row in hist if "year" in row and "amount" in row}
+    if 2024 in by_year and 2023 in by_year:
+        old, new = by_year[2023], by_year[2024]
+        if old:
+            return (new - old) / old * 100.0
+    return None
 
 
 if __name__ == "__main__":

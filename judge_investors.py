@@ -5,26 +5,65 @@ from config import client, JUDGE_MODEL
 
 
 JUDGE_SYSTEM_PROMPT = """
-You are an expert stewardship analyst.
+You are an expert stewardship / proxy voting analyst.
 
 You will receive:
-1) An investor's voting policy text (focused on remuneration / executive pay).
+1) An investor's voting policy text (focused on executive remuneration).
 2) A JSON object describing a company's remuneration facts for the current year.
 
-Your job is to decide how the investor would vote on the remuneration resolution
-(FOR or AGAINST) and briefly explain why.
+Your job is to decide how this investor would vote on the company's remuneration
+resolution and briefly explain why.
 
-Requirements:
-- Base your decision ONLY on the investor policy and the provided facts.
-- If the policy says, for example, "vote AGAINST if dilution exceeds 10%", then:
-  - Compare the numeric values correctly (e.g. 12.5 > 10).
-- If necessary information is missing from the facts, choose the vote that the policy suggests
-  in such cases, and explain the uncertainty.
-- Use a strict JSON response with keys: vote, reason, confidence.
-  - vote: "FOR" or "AGAINST"
-  - reason: short human-readable explanation (1-2 sentences)
-  - confidence: number between 0 and 1 representing how confident you are
+IMPORTANT RULES:
+
+- Base your decision ONLY on:
+  (a) the investor policy text, and
+  (b) the remuneration facts JSON.
+  Do NOT use market practice, general governance views, or outside knowledge.
+
+- Treat the investor policy as the source of rules. For example:
+    "Vote AGAINST if dilution exceeds 10%"
+    "Vote AGAINST if CEO pay grows faster than the wider workforce"
+    "Expect at least 20% of variable pay linked to ESG metrics"
+
+- Use the structured fields in the facts JSON whenever relevant, for example:
+    ceo_target_bonus_pct_of_salary
+    ceo_max_bonus_pct_of_salary
+    ceo_ltip_max_pct_of_salary
+    ceo_salary_increase_pct
+    workforce_salary_increase_pct
+    total_dilution_pct
+    dilution_policy_limit_pct
+    sti_total_esg_weight_pct
+    ltip_total_esg_weight_pct
+    esg_metrics_incentives_present
+    clawback_provision
+    malus_provision
+
+- Always do correct numeric comparisons, e.g.:
+    12.5 > 10
+    0 is not greater than 5
+    If a threshold is "at least 20%", then 20 is acceptable but 19 is not.
+
+- If a policy rule refers to information that is missing (null) in the facts JSON,
+  you may still make a judgement using the remaining information, but you must
+  acknowledge the missing data in your explanation.
+
+- If the policy clearly indicates an AGAINST in the current situation, choose "AGAINST".
+  Otherwise choose "FOR". Do not invent an ABSTAIN option.
+
+Return a STRICT JSON object with the following fields:
+
+- vote: "FOR" or "AGAINST"
+- reason: a short human-readable explanation (1–3 sentences) mentioning
+          the key policy rule(s) and fact(s) that drove the decision.
+- confidence: a number between 0 and 1 indicating your confidence in the decision.
+- key_violations: a list of short strings describing any breaches or concerns
+                  relative to the investor's policy (empty list if none).
+
+Do not include any other fields. Do not include markdown.
 """
+
 
 
 def build_judge_user_prompt(policy_text: str, facts: Dict[str, Any]) -> str:
@@ -37,38 +76,49 @@ def build_judge_user_prompt(policy_text: str, facts: Dict[str, Any]) -> str:
 {json.dumps(facts, indent=2)}
 [/REMUNERATION_FACTS_JSON]
 
-Decide the investor's vote (FOR or AGAINST) on the company's remuneration resolution,
-using ONLY the information above.
+Using ONLY the policy and facts above:
 
-Return ONLY a JSON object with fields: vote, reason, confidence.
+- Decide how this investor would vote on the company's remuneration resolution (FOR or AGAINST).
+- Base your decision on explicit policy rules and the numeric/boolean fields in the JSON.
+- If important data for a rule is missing (null), note this in your explanation.
+
+Return ONLY a JSON object with the fields: vote, reason, confidence, key_violations.
 """
 
 
 def judge_single_investor(policy_text: str, facts: Dict[str, Any]) -> Dict[str, Any]:
     response = client.chat.completions.create(
         model=JUDGE_MODEL,
-        response_format={ "type": "json_object" },
+        response_format={"type": "json_object"},
         messages=[
             {"role": "system", "content": JUDGE_SYSTEM_PROMPT},
             {"role": "user", "content": build_judge_user_prompt(policy_text, facts)},
         ],
-        temperature=0.1,
+        temperature=1,
     )
 
     content = response.choices[0].message.content
+    data = json.loads(content)
+
+    # Normalise
+    vote = str(data.get("vote", "")).upper().strip()
+    if vote not in ["FOR", "AGAINST"]:
+        vote = "FOR"
+    data["vote"] = vote
+
     try:
-        data = json.loads(content)
-    except json.JSONDecodeError:
-        raise ValueError(f"Model returned invalid JSON: {content[:500]}")
+        data["confidence"] = float(data.get("confidence", 0.5))
+    except (TypeError, ValueError):
+        data["confidence"] = 0.5
 
-    # Small hygiene / normalization
-    data["vote"] = data.get("vote", "").upper().strip()
-    if data["vote"] not in ["FOR", "AGAINST"]:
-        data["vote"] = "FOR"  # default, or raise
-
-    data["confidence"] = float(data.get("confidence", 0.5))
+    # Ensure key_violations is a list
+    kv = data.get("key_violations", [])
+    if not isinstance(kv, list):
+        kv = [str(kv)]
+    data["key_violations"] = [str(x) for x in kv]
 
     return data
+
 
 
 def judge_all_investors(
