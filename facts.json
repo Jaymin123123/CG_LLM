@@ -6,17 +6,17 @@
   "ltip_dilution_pct": null,
   "stip_dilution_pct": null,
   "dilution_policy_limit_pct": 5,
-  "dilution_policy_limit_pct_source": "eligible to participate in the LTIP ... up to a total amount of 5% of the issued share capital of the Company.",
+  "dilution_policy_limit_pct_source": "up to a total amount of 5% of the issued share capital of the Company.",
   "ceo_salary_increase_pct": null,
   "workforce_salary_increase_pct": null,
   "ceo_target_bonus_pct_of_salary": null,
   "ceo_max_bonus_pct_of_salary": null,
   "ceo_ltip_max_pct_of_salary": 1111.11,
-  "ceo_ltip_max_pct_of_salary_source": "The face value of the awards ... was \u20ac6m for the CEO ... \u20ac540,000 annual base salary paid to each executive director.",
+  "ceo_ltip_max_pct_of_salary_source": "\u201cThe face value of the awards\u2026 was \u20ac6m for the CEO\u201d and \u201c\u20ac540,000 annual base salary paid to each executive director.\u201d",
   "clawback_provision": true,
   "malus_provision": true,
   "post_cessation_holding_years": 2,
-  "post_cessation_holding_years_source": "Executive directors will be required to hold shares exceeding 100% of salary ... for two years post-employment.",
+  "post_cessation_holding_years_source": "Executive directors will be required to hold shares exceeding 100% of salary \u2026 for two years post-employment.",
   "shareholding_requirement_ceo": 3,
   "shareholding_requirement_ceo_source": "Minimum share ownership requirements are set at three times executive director base salary.",
   "esg_metrics_incentives_present": true,
@@ -28,8 +28,25 @@
     "Women representation (excluding assistants)"
   ],
   "key_concerns": [],
-  "extraction_notes": "Financial year is 2024 per multiple references to the year ended 31 December 2024. Currency set to EUR as remuneration amounts are denominated in euros (e.g., \u20ac540,000 salary). Dilution policy limit set to 5 based on LTIP limit of up to 5% of issued share capital; no actual dilution figures disclosed, so total/ltip/stip dilution are null. CEO LTIP max % of salary computed as (\u20ac6,000,000 face value at full vesting for CEO) / (\u20ac540,000 base salary) * 100 = 1111.11%; using explicit figures provided. Post-cessation holding is 2 years and shareholding requirement is 3x salary per explicit policy. No target or maximum short-term bonus percentages disclosed; moreover, no short-term incentive proposed and no 2024 bonus awarded, so bonus % fields are null. CEO/workforce salary increase percentages are not disclosed. Malus and clawback provisions explicitly exist (apply up to two years post vesting/payment). ESG metrics are present in LTIP performance conditions (TSR, financial, and non-financial metrics including SBTi targets and women representation). Being conservative, did not derive any overall dilution from option counts since full issuance scope not provided.",
+  "extraction_notes": "Currency set to EUR as remuneration and award values are presented in euros. Dilution policy limit (5%) taken from LTIP pool limit. CEO LTIP max % of salary computed as \u20ac6,000,000 face value at full vesting divided by \u20ac540,000 base salary = 11.111\u2026 (reported as 1111.11%). Post-cessation holding set to 2 years; CEO shareholding requirement set to 3x salary. No short-term incentive is proposed and no bonus awarded for 2024; target/max bonus % not disclosed. No disclosure enabling calculation of total or LTIP dilution, CEO or workforce salary increase.",
   "source_pdf": "CVC Capital Partners Plc annual report 2024.pdf",
   "rem_pages_start": 73,
-  "rem_pages_end": 101
+  "rem_pages_end": 101,
+  "financial_performance": {
+    "eps_current": 0.24,
+    "eps_prior": 2024.0,
+    "eps_change_pct": -99.98814229249012,
+    "profit_attributable_current_k": null,
+    "profit_attributable_prior_k": null,
+    "profit_attributable_change_pct": null,
+    "financial_source_pages_hint": [
+      24,
+      34,
+      53
+    ],
+    "financial_sources": {
+      "eps_source_snippet": "earnings per share (EPS) \n(based on the weighted average number of shares \noutstanding during the year), was \u20ac0.24  in 2024. \nReflecting the Group\u2019s performance since listing and \ncash generation in H2-24, the Board has \nrecommended a dividend of \u20ac225m (representing \n\u20ac0.21 per share) to be paid in June 2025, to \nshareholders on the register as at 23 May 2025. \nFinancial position\nStatutory cash and cash equivalents were \u20ac618m as \nat 31\u00a0December 2024, compared to \u20ac101m as at \n31\u00a0December 2023. \nSt",
+      "profit_source_snippet": "profit or loss of \n\u20ac1,131m, supported by \u20ac1,450m of long-term stable \nprivate placement notes which have a combined \nremaining weighted average tenor of 11 years, \nand\u00a0weighted average interest rate of 2.2%.Reflecting the Group\u2019s performance since listing \nand\u00a0cash generation in H2-24, the Board has \nrecommended a dividend of \u20ac225m (representing \n\u20ac0.21 per share) to be paid in June 2025, to \nshareholders on the register as at 23 May 2025. \nThe\u00a0Board has adopted a policy of paying a growing \ndivi"
+    }
+  }
 }

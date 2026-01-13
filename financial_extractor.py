@@ -48,7 +48,21 @@ def extract_financial_performance(pdf_path: str) -> Dict[str, Any]:
     """
     pages = _read_pdf_pages(pdf_path)
 
-    # Find pages likely containing EPS tables
+    # Find pages likely containing financial statements (broader search)
+    financial_statement_pages = _find_page_indices(
+        pages,
+        patterns=[
+            r"consolidated statement of (comprehensive )?income",
+            r"consolidated income statement",
+            r"statement of comprehensive income",
+            r"income statement",
+            r"consolidated statement of financial position",
+            r"consolidated statement of profit or loss",
+            r"financial statements",
+        ],
+    )
+
+    # Also find pages with EPS mentions
     eps_pages = _find_page_indices(
         pages,
         patterns=[
@@ -58,7 +72,10 @@ def extract_financial_performance(pdf_path: str) -> Dict[str, Any]:
         ],
     )
 
-    # We'll scan a small window around each hit and pick the best match
+    # Combine and deduplicate page indices
+    candidate_pages = sorted(set(financial_statement_pages + eps_pages))
+
+    # We'll scan a larger window around each hit and pick the best match
     best = {
         "eps_current": None,
         "eps_prior": None,
@@ -68,23 +85,36 @@ def extract_financial_performance(pdf_path: str) -> Dict[str, Any]:
         "sources": {},
     }
 
-    # regexes: allow "Dec-24 Dec-23 0.24 0.39" or variants
+    # regexes: more flexible patterns to handle various table formats
+    # EPS pattern: looks for "earnings per share" followed by numbers (handles tables with years/columns)
     eps_line_re = re.compile(
-        r"basic and diluted earnings per share.*?\n.*?([0-9]+\.[0-9]+)\s+([0-9]+\.[0-9]+)",
+        r"(?:basic(?:\s+and\s+diluted)?\s+)?earnings\s+per\s+share[^\d]*?(?:[0-9]{4}[^\d]*?)?([0-9]+(?:\.[0-9]+)?)[^\d]+([0-9]+(?:\.[0-9]+)?)",
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+    
+    # Alternative EPS pattern for table formats: "EPS" or "Earnings per share" with numbers in same line or nearby
+    eps_line_re_alt = re.compile(
+        r"earnings\s+per\s+share[:\s]*\n?[^\d]*?([0-9]+(?:\.[0-9]+)?)\s+([0-9]+(?:\.[0-9]+)?)",
         flags=re.IGNORECASE | re.DOTALL,
     )
 
+    # More flexible profit regex - handles various formats
     profit_line_re = re.compile(
-        r"profit attributable.*?\(?€\s*000\)?.*?\n.*?([0-9]{1,3}(?:,[0-9]{3})*)\s+([0-9]{1,3}(?:,[0-9]{3})*)",
+        r"profit\s+(?:attributable\s+to|for\s+the\s+year|after\s+tax)[^\d]*?(?:\(?€?\s*000\)?|\(?€?\s*m\)?|\(?€?\s*k\)?)?[^\d]*?([0-9]{1,3}(?:[,.\s][0-9]{3})*)\s+([0-9]{1,3}(?:[,.\s][0-9]{3})*)",
         flags=re.IGNORECASE | re.DOTALL,
     )
 
-    for idx in eps_pages:
-        window_start = max(0, idx - 1)
-        window_end = min(len(pages), idx + 2)
+    # Search with expanded windows around financial statement pages
+    for idx in candidate_pages:
+        # Use a much larger window: 10 pages before and 20 pages after
+        # Financial statements can span multiple pages
+        window_start = max(0, idx - 10)
+        window_end = min(len(pages), idx + 20)
         window_text = "\n".join(pages[window_start:window_end])
 
         eps_m = eps_line_re.search(window_text)
+        if not eps_m:
+            eps_m = eps_line_re_alt.search(window_text)
         prof_m = profit_line_re.search(window_text)
 
         # Heuristic: prefer candidates where we found EPS
@@ -106,11 +136,40 @@ def extract_financial_performance(pdf_path: str) -> Dict[str, Any]:
             best["profit_prior_k"] = profit_prior_k
             best["source_pages"] = [window_start + 1, idx + 1, window_end]  # human-ish
             best["sources"] = {
-                "eps_source_snippet": window_text[window_text.lower().find("basic and diluted earnings per share"):][:250],
-                "profit_source_snippet": (window_text[window_text.lower().find("profit attributable") :][:250]
-                                          if "profit attributable" in window_text.lower() else None),
+                "eps_source_snippet": window_text[window_text.lower().find("earnings per share"):][:500] if "earnings per share" in window_text.lower() else None,
+                "profit_source_snippet": (window_text[window_text.lower().find("profit"):][:500]
+                                          if "profit" in window_text.lower() else None),
             }
             break  # good enough for v1
+    
+    # If we didn't find EPS in the windows, try searching the entire PDF
+    if best["eps_current"] is None:
+        full_text = "\n".join(pages)
+        eps_m = eps_line_re.search(full_text)
+        if not eps_m:
+            eps_m = eps_line_re_alt.search(full_text)
+        prof_m = profit_line_re.search(full_text)
+        
+        if eps_m:
+            eps_current = _parse_number(eps_m.group(1))
+            eps_prior = _parse_number(eps_m.group(2))
+            
+            profit_current_k = None
+            profit_prior_k = None
+            if prof_m:
+                profit_current_k = _parse_number(prof_m.group(1))
+                profit_prior_k = _parse_number(prof_m.group(2))
+            
+            best["eps_current"] = eps_current
+            best["eps_prior"] = eps_prior
+            best["profit_current_k"] = profit_current_k
+            best["profit_prior_k"] = profit_prior_k
+            best["source_pages"] = ["full_pdf_search"]
+            best["sources"] = {
+                "eps_source_snippet": full_text[full_text.lower().find("earnings per share"):][:500] if "earnings per share" in full_text.lower() else None,
+                "profit_source_snippet": (full_text[full_text.lower().find("profit"):][:500]
+                                          if "profit" in full_text.lower() else None),
+            }
 
     # Compute changes deterministically
     eps_change_pct = None

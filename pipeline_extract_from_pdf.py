@@ -2,7 +2,7 @@
 
 import json
 import sys
-
+from financial_extractor import extract_financial_performance
 from pdf_rem_extractor import extract_rem_section_from_pdf
 from extract_facts import extract_facts_from_report
 from postprocess_facts import postprocess_facts   # <-- ADD THIS IMPORT
@@ -20,6 +20,13 @@ def extract_facts_from_full_pdf(pdf_path: str, output_json_path: str):
     facts.setdefault("source_pdf", pdf_path)
     facts.setdefault("rem_pages_start", start_idx + 1)
     facts.setdefault("rem_pages_end", end_idx + 1)
+    
+    # Add financial performance (separate pass across the whole PDF)
+    facts["financial_performance"] = extract_financial_performance(pdf_path)
+    print("Extracted financial_performance:", facts["financial_performance"])
+
+    # Then postprocess as usual
+    facts = postprocess_facts(facts)
 
     # 3️⃣ **** RUN THE POST-PROCESSOR HERE ****
     facts = postprocess_facts(facts)
