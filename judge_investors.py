@@ -79,6 +79,13 @@ Return a STRICT JSON object with exactly these fields:
   - key_violations: a list of short strings describing breaches or concerns
                     relative to the investor's policy (empty list if none).
 
+Pay-for-performance override:
+  If the policy mentions rewarding success/alignment/hurdles/not rewarding failure AND
+  financial_performance.eps_change_pct <= -10 (or profit_attributable_change_pct <= -10) AND
+  ceo_ltip_max_pct_of_salary is very high (>= 500) OR ceo_max_bonus_pct_of_salary >= 150,
+  then vote AGAINST unless the facts explicitly show reduced awards or strong justification.
+
+
 Do not include markdown. Do not include any other fields.
 """
 
@@ -104,7 +111,7 @@ Using ONLY the policy and facts above:
 
 Return ONLY a JSON object with the fields:
   vote, reason, confidence, key_violations.
-  n your reason, explicitly reference the JSON field names you relied on (e.g., eps_change_pct, total_dilution_pct).
+  In your reason, explicitly reference the JSON field names you relied on (e.g., eps_change_pct, total_dilution_pct).
 """
 
 
