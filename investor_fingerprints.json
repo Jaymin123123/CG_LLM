@@ -1,0 +1,1592 @@
+{
+  "APG Asset Management NV": {
+    "n_against_with_reasons": 0,
+    "top_triggers": [],
+    "example_phrases": [],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  },
+  "AXA Investment Managers (Paris) SA": {
+    "n_against_with_reasons": 7,
+    "top_triggers": [
+      {
+        "category": "PAY_FOR_PERFORMANCE_FAILURE",
+        "weight": 0.462,
+        "count": 6
+      },
+      {
+        "category": "WEAK_OR_NO_PERFORMANCE_TARGETS",
+        "weight": 0.231,
+        "count": 3
+      },
+      {
+        "category": "EXCESSIVE_TOTAL_PAY",
+        "weight": 0.231,
+        "count": 3
+      },
+      {
+        "category": "ESG_LINKAGE_INADEQUATE",
+        "weight": 0.077,
+        "count": 1
+      }
+    ],
+    "example_phrases": [
+      "Remuneration Policy not aligned with long-term shareholder interests",
+      "Lack of ESG performance criteria.",
+      "Remuneration Policy not aligned with long-term shareholder interests."
+    ],
+    "pay_for_performance_sensitive": true,
+    "disclosure_sensitive": true,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": true,
+    "pay_for_performance_strong": true,
+    "p4p_count": 6,
+    "p4p_share": 0.462,
+    "total_category_hits": 13
+  },
+  "Aberdeen Asset Managers Ltd.Standard Life": {
+    "n_against_with_reasons": 7,
+    "top_triggers": [
+      {
+        "category": "EXCESSIVE_TOTAL_PAY",
+        "weight": 0.25,
+        "count": 4
+      },
+      {
+        "category": "WEAK_OR_NO_PERFORMANCE_TARGETS",
+        "weight": 0.25,
+        "count": 4
+      },
+      {
+        "category": "ONE_OFF_OR_RETENTION_AWARD",
+        "weight": 0.188,
+        "count": 3
+      },
+      {
+        "category": "PAY_FOR_PERFORMANCE_FAILURE",
+        "weight": 0.125,
+        "count": 2
+      },
+      {
+        "category": "INSUFFICIENT_DISCLOSURE",
+        "weight": 0.062,
+        "count": 1
+      },
+      {
+        "category": "ACCELERATED_VESTING_OR_LEAVERS",
+        "weight": 0.062,
+        "count": 1
+      }
+    ],
+    "example_phrases": [
+      "We were concerned that there was no disclosure of performance targets which determine vesting of the Long Term Incentive Plan. We were concerned regarding the pay for performance alignment. Concerns have been identified with the departing CEO's exit arrangements, in particular the Company's decision to pro-rate his outstanding LTIP awards until after his retirement date and following a further 12 month period during which time he will provide advisory services to the Company. Furthermore, the Company has chosen to accelerate vesting of these awards to 30 June 2024 and estimate the performance for the ensuing year in determining the amount that should vest. Lastly, he is not subject to the post-vesting holding period for the LTIP awards. The incoming CEO received a one-off exceptional award to incentivise a strategic initiative.",
+      "We have concerns regarding the significant vesting outcome of the 2021 Long Term Incentive Plan. While we recognise that there was no significant reduction in share price between the awards granted May and June 2021, we have concerns that the company reverted to a 300% of salary incentive award and there was no subsequent adjustment on vesting for windfall gains despite the depressed share price at grant. We additionally have concerns regarding the reputational impact of such a significant award.",
+      "Concerns regarding the one off Long Term Incentive award of 16x salary. In addition this award is determined wholly by relative TSR with no formal financial underpin. Consistent with our votes last year we consider a vote against to be appropriate."
+    ],
+    "pay_for_performance_sensitive": true,
+    "disclosure_sensitive": true,
+    "leavers_sensitive": true,
+    "one_offs_sensitive": true,
+    "excessive_pay_sensitive": true,
+    "pay_for_performance_strong": false,
+    "p4p_count": 2,
+    "p4p_share": 0.125,
+    "total_category_hits": 16
+  },
+  "Aberdeen Asset Managers Ltd.Standard Life.1": {
+    "n_against_with_reasons": 7,
+    "top_triggers": [
+      {
+        "category": "EXCESSIVE_TOTAL_PAY",
+        "weight": 0.263,
+        "count": 5
+      },
+      {
+        "category": "WEAK_OR_NO_PERFORMANCE_TARGETS",
+        "weight": 0.211,
+        "count": 4
+      },
+      {
+        "category": "ONE_OFF_OR_RETENTION_AWARD",
+        "weight": 0.158,
+        "count": 3
+      },
+      {
+        "category": "PAY_FOR_PERFORMANCE_FAILURE",
+        "weight": 0.105,
+        "count": 2
+      },
+      {
+        "category": "EXCESSIVE_VARIABLE_PAY",
+        "weight": 0.105,
+        "count": 2
+      },
+      {
+        "category": "INSUFFICIENT_DISCLOSURE",
+        "weight": 0.053,
+        "count": 1
+      }
+    ],
+    "example_phrases": [
+      "We were concerned that there was no disclosure of performance targets which determine vesting of the Long Term Incentive Plan. We were concerned regarding the pay for performance alignment. Concerns have been identified with the departing CEO's exit arrangements, in particular the Company's decision to pro-rate his outstanding LTIP awards until after his retirement date and following a further 12 month period during which time he will provide advisory services to the Company. Furthermore, the Company has chosen to accelerate vesting of these awards to 30 June 2024 and estimate the performance for the ensuing year in determining the amount that should vest. Lastly, he is not subject to the post-vesting holding period for the LTIP awards. The incoming CEO received a one-off exceptional award to incentivise a strategic initiative.",
+      "We have concerns regarding the significant vesting outcome of the 2021 Long Term Incentive Plan. While we recognise that there was no significant reduction in share price between the awards granted May and June 2021, we have concerns that the company reverted to a 300% of salary incentive award and there was no subsequent adjustment on vesting for windfall gains despite the depressed share price at grant. We additionally have concerns regarding the reputational impact of such a significant award.",
+      "Concerns regarding the one off Long Term Incentive award of 16x salary. In addition this award is determined wholly by relative TSR with no formal financial underpin. Consistent with our votes last year we consider a vote against to be appropriate."
+    ],
+    "pay_for_performance_sensitive": true,
+    "disclosure_sensitive": true,
+    "leavers_sensitive": true,
+    "one_offs_sensitive": true,
+    "excessive_pay_sensitive": true,
+    "pay_for_performance_strong": false,
+    "p4p_count": 2,
+    "p4p_share": 0.105,
+    "total_category_hits": 19
+  },
+  "AllianceBernstein LP": {
+    "n_against_with_reasons": 3,
+    "top_triggers": [],
+    "example_phrases": [
+      "No comment available",
+      "No comment available",
+      "No comment available"
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  },
+  "Allianz Global Investors GmbH": {
+    "n_against_with_reasons": 6,
+    "top_triggers": [
+      {
+        "category": "ESG_LINKAGE_INADEQUATE",
+        "weight": 0.571,
+        "count": 4
+      },
+      {
+        "category": "ACCELERATED_VESTING_OR_LEAVERS",
+        "weight": 0.143,
+        "count": 1
+      },
+      {
+        "category": "INSUFFICIENT_DISCLOSURE",
+        "weight": 0.143,
+        "count": 1
+      },
+      {
+        "category": "PAY_FOR_PERFORMANCE_FAILURE",
+        "weight": 0.143,
+        "count": 1
+      }
+    ],
+    "example_phrases": [
+      "AllianzGI believes that all incentive awards should be time pro-rated and tested for performance, including in the event of an early termination due to the change of control. Termination payments following a change of control should be similar to those available under normal circumstances. AllianzGI expects clear disclosure of KPIs under all management incentive plans to enable investors to better assess the link between management incentives and corporate strategy and performance.",
+      "AllianzGI encourages companies to include ESG KPIs in their remuneration policy.",
+      "AllianzGI encourages companies to include ESG KPIs in their remuneration policy."
+    ],
+    "pay_for_performance_sensitive": true,
+    "disclosure_sensitive": true,
+    "leavers_sensitive": true,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 1,
+    "p4p_share": 0.143,
+    "total_category_hits": 7
+  },
+  "Amundi Asset Management SA (Investment Management)": {
+    "n_against_with_reasons": 35,
+    "top_triggers": [],
+    "example_phrases": [
+      "No comment available",
+      "No comment available",
+      "No comment available"
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  },
+  "Artemis Investment Management LLP": {
+    "n_against_with_reasons": 1,
+    "top_triggers": [
+      {
+        "category": "ONE_OFF_OR_RETENTION_AWARD",
+        "weight": 0.5,
+        "count": 1
+      },
+      {
+        "category": "WEAK_OR_NO_PERFORMANCE_TARGETS",
+        "weight": 0.5,
+        "count": 1
+      }
+    ],
+    "example_phrases": [
+      "Recruitment awards are not awarded in the form of shares or are not subject to performance criteria CFO Kate Ferry joined the Board on 17 July 2023. She received cash incentives on a like-for-like basis to those forfeited on leaving her previous employer."
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": true,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": true,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 2
+  },
+  "Aviva Investors Global Services Ltd.": {
+    "n_against_with_reasons": 34,
+    "top_triggers": [
+      {
+        "category": "EXCESSIVE_TOTAL_PAY",
+        "weight": 0.241,
+        "count": 19
+      },
+      {
+        "category": "WEAK_OR_NO_PERFORMANCE_TARGETS",
+        "weight": 0.241,
+        "count": 19
+      },
+      {
+        "category": "ESG_LINKAGE_INADEQUATE",
+        "weight": 0.203,
+        "count": 16
+      },
+      {
+        "category": "PAY_FOR_PERFORMANCE_FAILURE",
+        "weight": 0.152,
+        "count": 12
+      },
+      {
+        "category": "WEAK_GOVERNANCE_STRUCTURES",
+        "weight": 0.076,
+        "count": 6
+      },
+      {
+        "category": "INSUFFICIENT_DISCLOSURE",
+        "weight": 0.038,
+        "count": 3
+      }
+    ],
+    "example_phrases": [
+      "Poor performance linkage, Concerns over generosity of arrangements, Too much vesting at threshold or median performance, New exec on higher pay then predecessor",
+      "Company is not an accredited Living Wage Employer, Poor disclosure, Inappropriate discretionary payments",
+      "Potentially excessive remuneration, Poor performance linkage, Pay ratio is excessive (CEO vs employee)"
+    ],
+    "pay_for_performance_sensitive": true,
+    "disclosure_sensitive": true,
+    "leavers_sensitive": true,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": true,
+    "pay_for_performance_strong": false,
+    "p4p_count": 12,
+    "p4p_share": 0.152,
+    "total_category_hits": 79
+  },
+  "BNP Paribas Asset Management France SAS": {
+    "n_against_with_reasons": 6,
+    "top_triggers": [],
+    "example_phrases": [
+      "No comment available",
+      "No comment available",
+      "No comment available"
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  },
+  "Baillie Gifford & Co.": {
+    "n_against_with_reasons": 4,
+    "top_triggers": [
+      {
+        "category": "WEAK_OR_NO_PERFORMANCE_TARGETS",
+        "weight": 0.333,
+        "count": 1
+      },
+      {
+        "category": "EXCESSIVE_VARIABLE_PAY",
+        "weight": 0.333,
+        "count": 1
+      },
+      {
+        "category": "INSUFFICIENT_DISCLOSURE",
+        "weight": 0.333,
+        "count": 1
+      }
+    ],
+    "example_phrases": [
+      "No comment available",
+      "We opposed two resolutions relating to executive remuneration as we have reservations over the choice of return on invested capital as a long-term performance metric.",
+      "No comment available"
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": true,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": true,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 3
+  },
+  "BlackRock Fund Advisors": {
+    "n_against_with_reasons": 1,
+    "top_triggers": [
+      {
+        "category": "WEAK_OR_NO_PERFORMANCE_TARGETS",
+        "weight": 0.5,
+        "count": 1
+      },
+      {
+        "category": "ONE_OFF_OR_RETENTION_AWARD",
+        "weight": 0.5,
+        "count": 1
+      }
+    ],
+    "example_phrases": [
+      "Remuneration arrangements are poorly structured. Vesting conditions and performance hurdles are unsatisfactory. Poor use of remuneration committee discretion regarding the grant of a one-off award."
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": true,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": true,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 2
+  },
+  "Brandes Investment Partners LP": {
+    "n_against_with_reasons": 1,
+    "top_triggers": [],
+    "example_phrases": [
+      "No comment available"
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  },
+  "California State Teachers' Retirement System": {
+    "n_against_with_reasons": 0,
+    "top_triggers": [],
+    "example_phrases": [],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  },
+  "Canada Pension Plan Investment Board": {
+    "n_against_with_reasons": 0,
+    "top_triggers": [],
+    "example_phrases": [],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  },
+  "Candriam Investors Group": {
+    "n_against_with_reasons": 50,
+    "top_triggers": [
+      {
+        "category": "EXCESSIVE_TOTAL_PAY",
+        "weight": 0.378,
+        "count": 37
+      },
+      {
+        "category": "EXCESSIVE_VARIABLE_PAY",
+        "weight": 0.378,
+        "count": 37
+      },
+      {
+        "category": "ONE_OFF_OR_RETENTION_AWARD",
+        "weight": 0.102,
+        "count": 10
+      },
+      {
+        "category": "WEAK_OR_NO_PERFORMANCE_TARGETS",
+        "weight": 0.061,
+        "count": 6
+      },
+      {
+        "category": "ESG_LINKAGE_INADEQUATE",
+        "weight": 0.031,
+        "count": 3
+      },
+      {
+        "category": "PAY_FOR_PERFORMANCE_FAILURE",
+        "weight": 0.02,
+        "count": 2
+      }
+    ],
+    "example_phrases": [
+      "Total remuneration is more than two times the median of peers.- The total short-term remuneration is more than 150% of base salary.- Total variable remuneration is more than 350% of base salary.",
+      "The CEO's bonus paid out at 36% of maximum (GBP 800,000), largely driven by the outturn of non-financial metrics, which might appear excessive considering financial performance during the year.- Jason Windsor will receive awards to compensate for remuneration forfeited on leaving his previous employer",
+      "Concerns have been identified with the departing CEO's exit arrangements, in particular the Company's decision to pro-rate his outstanding LTIP awards until after his retirement date and following a further 12 month period during which time he will provide advisory services to the Company. Furthermore, the Company has chosen to accelerate vesting of these awards to 30 June 2024 and estimate the performance for the ensuing year in determining the amount that should vest. Lastly, he is not subject to the post-vesting holding period for the LTIP awards.- The incoming CEO received a one-off exceptional award to incentivise a strategic initiative.In addition:- Total variable remuneration is more than 350 percent of base salary."
+    ],
+    "pay_for_performance_sensitive": true,
+    "disclosure_sensitive": true,
+    "leavers_sensitive": true,
+    "one_offs_sensitive": true,
+    "excessive_pay_sensitive": true,
+    "pay_for_performance_strong": false,
+    "p4p_count": 2,
+    "p4p_share": 0.02,
+    "total_category_hits": 98
+  },
+  "Charles Schwab Investment Management, Inc.": {
+    "n_against_with_reasons": 1,
+    "top_triggers": [],
+    "example_phrases": [
+      "No comment available"
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  },
+  "Colorado Public Employees' Retirement Association": {
+    "n_against_with_reasons": 0,
+    "top_triggers": [],
+    "example_phrases": [],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  },
+  "Credit Suisse Asset Management (Schweiz) AG": {
+    "n_against_with_reasons": 0,
+    "top_triggers": [],
+    "example_phrases": [],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  },
+  "Deka Investment GmbH": {
+    "n_against_with_reasons": 4,
+    "top_triggers": [],
+    "example_phrases": [
+      "No comment available",
+      "No comment available",
+      "No comment available"
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  },
+  "Dimensional Fund Advisors LP": {
+    "n_against_with_reasons": 0,
+    "top_triggers": [],
+    "example_phrases": [],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  },
+  "Eaton Vance Management": {
+    "n_against_with_reasons": 1,
+    "top_triggers": [],
+    "example_phrases": [
+      "No comment available"
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  },
+  "FIL Investment Advisors (UK) Ltd.": {
+    "n_against_with_reasons": 1,
+    "top_triggers": [
+      {
+        "category": "EXCESSIVE_TOTAL_PAY",
+        "weight": 1.0,
+        "count": 1
+      }
+    ],
+    "example_phrases": [
+      "Excessive quantum."
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": true,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  },
+  "First Sentier Investors (Australia) IM Ltd.": {
+    "n_against_with_reasons": 0,
+    "top_triggers": [],
+    "example_phrases": [],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  },
+  "Franklin Templeton Fund Management Ltd.": {
+    "n_against_with_reasons": 1,
+    "top_triggers": [],
+    "example_phrases": [
+      "No comment available"
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  },
+  "Guardians of New Zealand Superannuation": {
+    "n_against_with_reasons": 1,
+    "top_triggers": [],
+    "example_phrases": [
+      "No comment available"
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  },
+  "Guardians of New Zealand Superannuation.1": {
+    "n_against_with_reasons": 1,
+    "top_triggers": [],
+    "example_phrases": [
+      "No comment available"
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  },
+  "HSBC Global Asset Management (UK) Ltd.": {
+    "n_against_with_reasons": 54,
+    "top_triggers": [
+      {
+        "category": "EXCESSIVE_TOTAL_PAY",
+        "weight": 0.864,
+        "count": 51
+      },
+      {
+        "category": "WEAK_GOVERNANCE_STRUCTURES",
+        "weight": 0.051,
+        "count": 3
+      },
+      {
+        "category": "WEAK_OR_NO_PERFORMANCE_TARGETS",
+        "weight": 0.034,
+        "count": 2
+      },
+      {
+        "category": "ACCELERATED_VESTING_OR_LEAVERS",
+        "weight": 0.017,
+        "count": 1
+      },
+      {
+        "category": "ONE_OFF_OR_RETENTION_AWARD",
+        "weight": 0.017,
+        "count": 1
+      },
+      {
+        "category": "EXCESSIVE_VARIABLE_PAY",
+        "weight": 0.017,
+        "count": 1
+      }
+    ],
+    "example_phrases": [
+      "We consider the quantum of the total pay excessive.",
+      "Concerns have been identified with the departing CEO's exit arrangements, in particular the Company's decision to pro-rate his outstanding LTIP awards until after his retirement date and following a further 12 month period during which time he will provide advisory services to the Company. The Company has chosen to accelerate vesting of these awards to 30 June 2024 and estimate the performance for the ensuing year in determining the amount that should vest. The departing CEO is not subject to the post-vesting holding period for the LTIP awards.The incoming CEO received a one-off exceptional award to incentivise a strategic initiative.",
+      "We consider the quantum of the total pay excessive."
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": true,
+    "leavers_sensitive": true,
+    "one_offs_sensitive": true,
+    "excessive_pay_sensitive": true,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 59
+  },
+  "Hermes Equity Ownersip Services (Hermes EOS)": {
+    "n_against_with_reasons": 6,
+    "top_triggers": [
+      {
+        "category": "PAY_FOR_PERFORMANCE_FAILURE",
+        "weight": 1.0,
+        "count": 6
+      }
+    ],
+    "example_phrases": [
+      "Pay is misaligned with EOS remuneration principles",
+      "Pay is misaligned with EOS remuneration principles",
+      "Pay is misaligned with EOS remuneration principles"
+    ],
+    "pay_for_performance_sensitive": true,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": true,
+    "p4p_count": 6,
+    "p4p_share": 1.0,
+    "total_category_hits": 6
+  },
+  "Invesco Asset Management Ltd.": {
+    "n_against_with_reasons": 1,
+    "top_triggers": [],
+    "example_phrases": [
+      "No comment available"
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  },
+  "Irish Life Investment Managers Ltd.": {
+    "n_against_with_reasons": 1,
+    "top_triggers": [
+      {
+        "category": "EXCESSIVE_VARIABLE_PAY",
+        "weight": 0.5,
+        "count": 1
+      },
+      {
+        "category": "WEAK_OR_NO_PERFORMANCE_TARGETS",
+        "weight": 0.5,
+        "count": 1
+      }
+    ],
+    "example_phrases": [
+      "A vote AGAINST this item is considered warranted because:- The Company's remuneration policy received significant dissent at the 2023 AGM (46% against) in light of concerns around the substantial increase in both the annual bonus and LTIP maximum opportunities. Despite the level of dissent recorded, no material actions have been taken to the remuneration arrangements to address the concerns.- Concerns remain on the subjective nature of the Co-Investment Award's performance underpins and their sufficiency and appropriateness to justify the substantial payout. It is, however, recognised that the Remuneration Committee has provided commentary in the annual report on its assessment of the performance underpins. This scheme was previously supported by majority of shareholders, albeit not without notable dissents."
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": true,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": true,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 2
+  },
+  "J.O. Hambro Capital Management Ltd.": {
+    "n_against_with_reasons": 6,
+    "top_triggers": [],
+    "example_phrases": [
+      "No comment available",
+      "No comment available",
+      "No comment available"
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  },
+  "Jupiter Asset Management Ltd.": {
+    "n_against_with_reasons": 2,
+    "top_triggers": [
+      {
+        "category": "PAY_FOR_PERFORMANCE_FAILURE",
+        "weight": 0.5,
+        "count": 1
+      },
+      {
+        "category": "EXCESSIVE_TOTAL_PAY",
+        "weight": 0.5,
+        "count": 1
+      }
+    ],
+    "example_phrases": [
+      "A vote against is warranted as the annual bonus paid out by reference to non-financial performance despite the Company incurring a statutory loss for the year and despite significant depreciation in shareholder value. We acknowledge and understand the importance of some of these non-financial metrics such as Safer Betting and Gaming. However, given the overall shareholder experience a vote against is deemed appropriate.",
+      "A vote against is warranted due to concerns with the total quantum awarded."
+    ],
+    "pay_for_performance_sensitive": true,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": true,
+    "pay_for_performance_strong": false,
+    "p4p_count": 1,
+    "p4p_share": 0.5,
+    "total_category_hits": 2
+  },
+  "LGPS Central Ltd.": {
+    "n_against_with_reasons": 12,
+    "top_triggers": [
+      {
+        "category": "PAY_FOR_PERFORMANCE_FAILURE",
+        "weight": 0.917,
+        "count": 11
+      },
+      {
+        "category": "WEAK_GOVERNANCE_STRUCTURES",
+        "weight": 0.083,
+        "count": 1
+      }
+    ],
+    "example_phrases": [
+      "Pay is misaligned with EOS remuneration principles",
+      "Pay is misaligned with EOS remuneration principles",
+      "Pay is misaligned with EOS remuneration principles"
+    ],
+    "pay_for_performance_sensitive": true,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": true,
+    "p4p_count": 11,
+    "p4p_share": 0.917,
+    "total_category_hits": 12
+  },
+  "La Banque Postale Asset Management SA": {
+    "n_against_with_reasons": 35,
+    "top_triggers": [],
+    "example_phrases": [
+      "No comment available",
+      "No comment available",
+      "No comment available"
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  },
+  "Legal & General Investment Management Ltd.": {
+    "n_against_with_reasons": 10,
+    "top_triggers": [
+      {
+        "category": "WEAK_OR_NO_PERFORMANCE_TARGETS",
+        "weight": 0.25,
+        "count": 4
+      },
+      {
+        "category": "WEAK_GOVERNANCE_STRUCTURES",
+        "weight": 0.25,
+        "count": 4
+      },
+      {
+        "category": "ONE_OFF_OR_RETENTION_AWARD",
+        "weight": 0.188,
+        "count": 3
+      },
+      {
+        "category": "ACCELERATED_VESTING_OR_LEAVERS",
+        "weight": 0.125,
+        "count": 2
+      },
+      {
+        "category": "INSUFFICIENT_DISCLOSURE",
+        "weight": 0.062,
+        "count": 1
+      },
+      {
+        "category": "ESG_LINKAGE_INADEQUATE",
+        "weight": 0.062,
+        "count": 1
+      }
+    ],
+    "example_phrases": [
+      "Lack of disclosure relating to performance conditions. A vote against is applied because the company has adopted an incentive plan that is not aligned with LGIM's UK policy on executive pay. A vote against is applied due to the Remuneration Committee adjusting the vesting date to enable awards to vest early for the departing director.",
+      "A sufficient proportion of the award is not deferred into shares for a period of time. The plan is in addition to existing plans and therefore fails our requirement for the remuneration structure to be simple.",
+      "A vote against is applied due to the retrospective changes made to the plan's operations. The company's EPS targets for LTIP awards vesting during the year where adjusted upwards to result in a payout that otherwise would have been NIL."
+    ],
+    "pay_for_performance_sensitive": true,
+    "disclosure_sensitive": true,
+    "leavers_sensitive": true,
+    "one_offs_sensitive": true,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 1,
+    "p4p_share": 0.062,
+    "total_category_hits": 16
+  },
+  "MEAG MUNICH ERGO Kapitalanlagegesellschaft mbH": {
+    "n_against_with_reasons": 17,
+    "top_triggers": [],
+    "example_phrases": [
+      "No comment available",
+      "No comment available",
+      "No comment available"
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  },
+  "Manulife Investment Management (US) LLC": {
+    "n_against_with_reasons": 2,
+    "top_triggers": [],
+    "example_phrases": [
+      "No comment available",
+      "No comment available"
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  },
+  "Mellon Investments Corp.": {
+    "n_against_with_reasons": 1,
+    "top_triggers": [],
+    "example_phrases": [
+      "No comment available"
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  },
+  "NBIM": {
+    "n_against_with_reasons": 2,
+    "top_triggers": [
+      {
+        "category": "INSUFFICIENT_DISCLOSURE",
+        "weight": 0.5,
+        "count": 2
+      },
+      {
+        "category": "EXCESSIVE_TOTAL_PAY",
+        "weight": 0.5,
+        "count": 2
+      }
+    ],
+    "example_phrases": [
+      "The board is responsible for attracting the right CEO and setting appropriate remuneration. A substantial proportion of annual remuneration should be provided as shares that are locked in for five to ten years, regardless of resignation or retirement. The board should provide transparency on total remuneration to avoid unacceptable outcomes. The board should ensure that all benefits have a clear business rationale. Pensionable income should constitute a minor part of total remuneration.CEO remuneration",
+      "The board is responsible for attracting the right CEO and setting appropriate remuneration. A substantial proportion of annual remuneration should be provided as shares that are locked in for five to ten years, regardless of resignation or retirement. The board should provide transparency on total remuneration to avoid unacceptable outcomes. The board should ensure that all benefits have a clear business rationale. Pensionable income should constitute a minor part of total remuneration."
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": true,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": true,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 4
+  },
+  "NFU Mutual": {
+    "n_against_with_reasons": 2,
+    "top_triggers": [
+      {
+        "category": "EXCESSIVE_TOTAL_PAY",
+        "weight": 0.5,
+        "count": 1
+      },
+      {
+        "category": "WEAK_OR_NO_PERFORMANCE_TARGETS",
+        "weight": 0.5,
+        "count": 1
+      }
+    ],
+    "example_phrases": [
+      "A vote AGAINST this item is considered warranted because: The Company's remuneration policy received significant dissent at the 2023 AGM (46% against) in light of concerns around the substantial increase in both the annual bonus and LTIP maximum opportunities. Despite the level of dissent recorded, no material actions have been taken to the remuneration arrangements to address the concerns. Concerns remain on the subjective nature of the Co-Investment Award's performance underpins and their sufficiency and appropriateness to justify the substantial payout. It is, however, recognised that the Remuneration Committee has provided commentary in the annual report on its assessment of the performance underpins. This scheme was previously supported by majority of shareholders, albeit not without notable dissents.",
+      "No comment available"
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": true,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": true,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 2
+  },
+  "Ninety One UK Ltd.": {
+    "n_against_with_reasons": 1,
+    "top_triggers": [
+      {
+        "category": "WEAK_OR_NO_PERFORMANCE_TARGETS",
+        "weight": 1.0,
+        "count": 1
+      }
+    ],
+    "example_phrases": [
+      "It should not be easier to achieve the LTI going forward and the incentives should take account of the destocking and deleverage because of it."
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": true,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  },
+  "Nordea Investment Management AB (Denmark)": {
+    "n_against_with_reasons": 9,
+    "top_triggers": [],
+    "example_phrases": [
+      "No comment available",
+      "We do not support the proposal as it does not protect or enhance long-term shareholder value creation.",
+      "No comment available"
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  },
+  "Ossiam SA": {
+    "n_against_with_reasons": 6,
+    "top_triggers": [
+      {
+        "category": "WEAK_OR_NO_PERFORMANCE_TARGETS",
+        "weight": 0.8,
+        "count": 4
+      },
+      {
+        "category": "ESG_LINKAGE_INADEQUATE",
+        "weight": 0.2,
+        "count": 1
+      }
+    ],
+    "example_phrases": [
+      "No comment available",
+      "The performance period of the LTIP is less than three years.",
+      "No tie between compensation and sustainability. The grants under the long-term incentive plan are not 100% performance based."
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": true,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 5
+  },
+  "Ostrum Asset Management SA": {
+    "n_against_with_reasons": 1,
+    "top_triggers": [],
+    "example_phrases": [
+      "No comment available"
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  },
+  "PGGM Vermogensbeheer BV": {
+    "n_against_with_reasons": 14,
+    "top_triggers": [
+      {
+        "category": "WEAK_OR_NO_PERFORMANCE_TARGETS",
+        "weight": 0.632,
+        "count": 12
+      },
+      {
+        "category": "WEAK_GOVERNANCE_STRUCTURES",
+        "weight": 0.158,
+        "count": 3
+      },
+      {
+        "category": "PAY_FOR_PERFORMANCE_FAILURE",
+        "weight": 0.158,
+        "count": 3
+      },
+      {
+        "category": "ESG_LINKAGE_INADEQUATE",
+        "weight": 0.053,
+        "count": 1
+      }
+    ],
+    "example_phrases": [
+      "The grants under the long-term incentive plan are not sufficiently performance based.",
+      "The grants under the long-term incentive plan are not sufficiently performance based. The compensation plan lacks of clawback provisions under the Short-Term Incentive Plan. Minimum vesting period for awards granted under the plan is too short.",
+      "The grants under the long-term incentive plan are not sufficiently performance based."
+    ],
+    "pay_for_performance_sensitive": true,
+    "disclosure_sensitive": true,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 3,
+    "p4p_share": 0.158,
+    "total_category_hits": 19
+  },
+  "Pictet Asset Management SA": {
+    "n_against_with_reasons": 2,
+    "top_triggers": [
+      {
+        "category": "ACCELERATED_VESTING_OR_LEAVERS",
+        "weight": 0.2,
+        "count": 1
+      },
+      {
+        "category": "ONE_OFF_OR_RETENTION_AWARD",
+        "weight": 0.2,
+        "count": 1
+      },
+      {
+        "category": "EXCESSIVE_TOTAL_PAY",
+        "weight": 0.2,
+        "count": 1
+      },
+      {
+        "category": "EXCESSIVE_VARIABLE_PAY",
+        "weight": 0.2,
+        "count": 1
+      },
+      {
+        "category": "WEAK_OR_NO_PERFORMANCE_TARGETS",
+        "weight": 0.2,
+        "count": 1
+      }
+    ],
+    "example_phrases": [
+      "Concerns have been identified with the departing CEO's exit arrangements, in particular the Company's decision to pro-rate his outstanding LTIP awards until after his retirement date and following a further 12 month period during which time he will provide advisory services to the Company. Furthermore, the Company has chosen to accelerate vesting of these awards to 30 June 2024 and estimate the performance for the ensuing year in determining the amount that should vest. Lastly, he is not subject to the post-vesting holding period for the LTIP awards. - The incoming CEO received a one-off exceptional award to incentivise a strategic initiative.",
+      "The Company's remuneration policy received significant dissent at the 2023 AGM (46% against) in light of concerns around the substantial increase in both the annual bonus and LTIP maximum opportunities. Despite the level of dissent recorded, no material actions have been taken to the remuneration arrangements to address the concerns. - Concerns remain on the subjective nature of the Co-Investment Award's performance underpins and their sufficiency and appropriateness to justify the substantial payout. It is, however, recognised that the Remuneration Committee has provided commentary in the annual report on its assessment of the performance underpins. This scheme was previously supported by majority of shareholders, albeit not without notable dissents"
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": true,
+    "leavers_sensitive": true,
+    "one_offs_sensitive": true,
+    "excessive_pay_sensitive": true,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 5
+  },
+  "Principal Global Investors LLC": {
+    "n_against_with_reasons": 0,
+    "top_triggers": [],
+    "example_phrases": [],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  },
+  "RBC Global Asset Management, Inc.": {
+    "n_against_with_reasons": 0,
+    "top_triggers": [],
+    "example_phrases": [],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  },
+  "River & Mercantile Asset Management LLP": {
+    "n_against_with_reasons": 0,
+    "top_triggers": [],
+    "example_phrases": [],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  },
+  "Robeco Institutional Asset Management BV": {
+    "n_against_with_reasons": 4,
+    "top_triggers": [
+      {
+        "category": "WEAK_GOVERNANCE_STRUCTURES",
+        "weight": 0.667,
+        "count": 4
+      },
+      {
+        "category": "WEAK_OR_NO_PERFORMANCE_TARGETS",
+        "weight": 0.333,
+        "count": 2
+      }
+    ],
+    "example_phrases": [
+      "Remuneration does not adhere to best practice of having clawback in place for LTIP",
+      "The remuneration assessment framework shows a lack of adequate structure",
+      "The compensation committee exercises its discretion to lower performance goals or increase awards."
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": true,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 6
+  },
+  "Royal London Asset Management Ltd": {
+    "n_against_with_reasons": 15,
+    "top_triggers": [
+      {
+        "category": "WEAK_OR_NO_PERFORMANCE_TARGETS",
+        "weight": 0.357,
+        "count": 10
+      },
+      {
+        "category": "EXCESSIVE_VARIABLE_PAY",
+        "weight": 0.179,
+        "count": 5
+      },
+      {
+        "category": "EXCESSIVE_TOTAL_PAY",
+        "weight": 0.143,
+        "count": 4
+      },
+      {
+        "category": "ONE_OFF_OR_RETENTION_AWARD",
+        "weight": 0.107,
+        "count": 3
+      },
+      {
+        "category": "WEAK_GOVERNANCE_STRUCTURES",
+        "weight": 0.107,
+        "count": 3
+      },
+      {
+        "category": "ACCELERATED_VESTING_OR_LEAVERS",
+        "weight": 0.071,
+        "count": 2
+      }
+    ],
+    "example_phrases": [
+      "We have some concerns over the significant salary increase on appointment for the CFO",
+      "We retain our concerns over the company's remuneration practices with the granting of both performance and restricted shares. In addition to this, we take issue with the one-off award.",
+      "We have ongoing concerns over the CEO's salary increase and its associated crutch on awards given an increase to the LTIP maximum. We also note some concerns over the restricted share plan, vesting in less than three years and lacking any performance conditions."
+    ],
+    "pay_for_performance_sensitive": true,
+    "disclosure_sensitive": true,
+    "leavers_sensitive": true,
+    "one_offs_sensitive": true,
+    "excessive_pay_sensitive": true,
+    "pay_for_performance_strong": false,
+    "p4p_count": 1,
+    "p4p_share": 0.036,
+    "total_category_hits": 28
+  },
+  "Russell Investment Management LLC": {
+    "n_against_with_reasons": 2,
+    "top_triggers": [],
+    "example_phrases": [
+      "No comment available",
+      "No comment available"
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  },
+  "Schroder Investment Management Ltd.": {
+    "n_against_with_reasons": 18,
+    "top_triggers": [
+      {
+        "category": "WEAK_OR_NO_PERFORMANCE_TARGETS",
+        "weight": 0.565,
+        "count": 13
+      },
+      {
+        "category": "WEAK_GOVERNANCE_STRUCTURES",
+        "weight": 0.174,
+        "count": 4
+      },
+      {
+        "category": "EXCESSIVE_TOTAL_PAY",
+        "weight": 0.087,
+        "count": 2
+      },
+      {
+        "category": "ESG_LINKAGE_INADEQUATE",
+        "weight": 0.043,
+        "count": 1
+      },
+      {
+        "category": "EXCESSIVE_VARIABLE_PAY",
+        "weight": 0.043,
+        "count": 1
+      },
+      {
+        "category": "INSUFFICIENT_DISCLOSURE",
+        "weight": 0.043,
+        "count": 1
+      }
+    ],
+    "example_phrases": [
+      "Metric Concerns: Less than 50% of STI targets are financial.",
+      "No comment available",
+      "Targets not considered sufficiently stretching."
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": true,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": true,
+    "excessive_pay_sensitive": true,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 23
+  },
+  "Storebrand Asset Management AS": {
+    "n_against_with_reasons": 1,
+    "top_triggers": [
+      {
+        "category": "EXCESSIVE_TOTAL_PAY",
+        "weight": 0.333,
+        "count": 1
+      },
+      {
+        "category": "EXCESSIVE_VARIABLE_PAY",
+        "weight": 0.333,
+        "count": 1
+      },
+      {
+        "category": "WEAK_OR_NO_PERFORMANCE_TARGETS",
+        "weight": 0.333,
+        "count": 1
+      }
+    ],
+    "example_phrases": [
+      "A vote AGAINST this item is considered warranted because: The Company's remuneration policy received significant dissent at the 2023 AGM (46% against) in light of concerns around the substantial increase in both the annual bonus and LTIP maximum opportunities. Despite the level of dissent recorded, no material actions have been taken to the remuneration arrangements to address the concerns. Concerns remain on the subjective nature of the Co-Investment Award's performance underpins and their sufficiency and appropriateness to justify the substantial payout. It is, however, recognised that the Remuneration Committee has provided commentary in the annual report on its assessment of the performance underpins. This scheme was previously supported by majority of shareholders, albeit not without notable dissents."
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": true,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": true,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 3
+  },
+  "Swedbank Robur Fonder AB": {
+    "n_against_with_reasons": 1,
+    "top_triggers": [],
+    "example_phrases": [
+      "No comment available"
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  },
+  "Sycomore Asset Management SA": {
+    "n_against_with_reasons": 5,
+    "top_triggers": [],
+    "example_phrases": [
+      "No comment available",
+      "No comment available",
+      "No comment available"
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  },
+  "TIAA-CREF Investment Management LLC": {
+    "n_against_with_reasons": 1,
+    "top_triggers": [],
+    "example_phrases": [
+      "No comments availabe"
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  },
+  "TOBAM SAS": {
+    "n_against_with_reasons": 1,
+    "top_triggers": [],
+    "example_phrases": [
+      "No comment available"
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  },
+  "The Caisse de depot et placement du Quebec": {
+    "n_against_with_reasons": 1,
+    "top_triggers": [],
+    "example_phrases": [
+      "No comment available"
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  },
+  "The California Public Employees Retirement System": {
+    "n_against_with_reasons": 0,
+    "top_triggers": [],
+    "example_phrases": [],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  },
+  "UBS Asset Management Switzerland AG": {
+    "n_against_with_reasons": 2,
+    "top_triggers": [
+      {
+        "category": "ONE_OFF_OR_RETENTION_AWARD",
+        "weight": 0.333,
+        "count": 1
+      },
+      {
+        "category": "ACCELERATED_VESTING_OR_LEAVERS",
+        "weight": 0.333,
+        "count": 1
+      },
+      {
+        "category": "EXCESSIVE_TOTAL_PAY",
+        "weight": 0.333,
+        "count": 1
+      }
+    ],
+    "example_phrases": [
+      "One-off payments inadequately justified. Accelerated vesting at retirement undermines shareholder long-term interest.",
+      "Excessive pay quantum."
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": true,
+    "one_offs_sensitive": true,
+    "excessive_pay_sensitive": true,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 3
+  },
+  "USS Investment Management Ltd.": {
+    "n_against_with_reasons": 32,
+    "top_triggers": [
+      {
+        "category": "PAY_FOR_PERFORMANCE_FAILURE",
+        "weight": 0.914,
+        "count": 32
+      },
+      {
+        "category": "INSUFFICIENT_DISCLOSURE",
+        "weight": 0.086,
+        "count": 3
+      }
+    ],
+    "example_phrases": [
+      "We have concerns regarding the alignment of pay with performance.",
+      "We have concerns regarding the alignment of pay with performance",
+      "We have concerns regarding the alignment of pay with performance."
+    ],
+    "pay_for_performance_sensitive": true,
+    "disclosure_sensitive": true,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": true,
+    "p4p_count": 32,
+    "p4p_share": 0.914,
+    "total_category_hits": 35
+  },
+  "Union Investment Institutional GmbH": {
+    "n_against_with_reasons": 0,
+    "top_triggers": [],
+    "example_phrases": [],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  },
+  "Zurcher Kantonalbank (Investment Management)": {
+    "n_against_with_reasons": 12,
+    "top_triggers": [],
+    "example_phrases": [
+      "No comment available",
+      "No comment available",
+      "No comment available"
+    ],
+    "pay_for_performance_sensitive": false,
+    "disclosure_sensitive": false,
+    "leavers_sensitive": false,
+    "one_offs_sensitive": false,
+    "excessive_pay_sensitive": false,
+    "pay_for_performance_strong": false,
+    "p4p_count": 0,
+    "p4p_share": 0.0,
+    "total_category_hits": 1
+  }
+}
