@@ -5,6 +5,7 @@ import sys
 import json
 
 from pipeline_extract_from_pdf import extract_facts_from_full_pdf
+from extract_facts_multi_pass import extract_facts_multi_pass_from_pdf
 from judge_investors import judge_all_investors
 
 
@@ -15,7 +16,7 @@ def main(pdf_path: str, investor_csv_path: str, output_csv_path: str):
 
     # 2) Extract + postprocess facts for this PDF
     print(f"[1/2] Extracting remuneration facts from {pdf_path} ...")
-    extract_facts_from_full_pdf(pdf_path, facts_path)
+    extract_facts_multi_pass_from_pdf(pdf_path, facts_path)
 
     # Optional: quick peek
     with open(facts_path, "r", encoding="utf-8") as f:

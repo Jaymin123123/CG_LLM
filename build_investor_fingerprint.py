@@ -30,6 +30,11 @@ df["cats"] = df["reason_categories"].apply(parse_categories)
 
 fingerprints = {}
 
+def strong(counter, key, min_count=3, min_share=0.25):
+    total = sum(counter.values()) or 1
+    return counter[key] >= min_count and (counter[key] / total) >= min_share
+
+
 for investor, g in df.groupby("investor"):
     all_cats = []
     examples = []
@@ -76,11 +81,30 @@ for investor, g in df.groupby("investor"):
         "example_phrases": examples[:3],
 
         # soft priors
-        "pay_for_performance_sensitive": pay_for_performance_sensitive,
-        "disclosure_sensitive": disclosure_sensitive,
-        "leavers_sensitive": leavers_sensitive,
-        "one_offs_sensitive": one_offs_sensitive,
-        "excessive_pay_sensitive": excessive_pay_sensitive,
+        "pay_for_performance_sensitive": strong(
+            counter, "PAY_FOR_PERFORMANCE_FAILURE", 3, 0.25
+        ),
+
+        "disclosure_sensitive": (
+            strong(counter, "INSUFFICIENT_DISCLOSURE", 3, 0.25)
+            or strong(counter, "WEAK_OR_NO_PERFORMANCE_TARGETS", 3, 0.25)
+        ),
+
+        "leavers_sensitive": strong(
+            counter, "ACCELERATED_VESTING_OR_LEAVERS", 2, 0.15
+        ),
+
+        "one_offs_sensitive": strong(
+            counter, "ONE_OFF_OR_RETENTION_AWARD", 2, 0.15
+        ),
+
+        "excessive_pay_sensitive": (
+            (counter["EXCESSIVE_TOTAL_PAY"] + counter["EXCESSIVE_VARIABLE_PAY"]) >= 3
+            and (
+                (counter["EXCESSIVE_TOTAL_PAY"] + counter["EXCESSIVE_VARIABLE_PAY"])
+                / (sum(counter.values()) or 1)
+            ) >= 0.25
+        ),
 
         # hard gate
         "pay_for_performance_strong": pay_for_performance_strong,

@@ -17,7 +17,7 @@ python compare_votes.py \
   --pred-name-col Investor --pred-vote-col Vote \
   --out details.csv
 
-Notes:
+Notes:6
 - Supports CSV and Excel (.xlsx).
 - Normalises votes (e.g., "FOR", "For ", "in favour" -> "FOR"; "against", "oppose" -> "AGAINST").
 """

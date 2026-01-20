@@ -29,85 +29,14 @@ You will receive:
 Your job is to decide how this investor would vote on the company's
 remuneration resolution and briefly explain why.
 
-CRITICAL RULES:
-
-- Base your decision ONLY on:
-  (a) the investor policy text,
-  (b) the facts JSON provided,
-  (c) the optional investor behavioural profile provided, and
-  (d) OVERRIDE_FLAGS.
-  Do NOT use general market practice, your own preferences, or outside knowledge.
-
-- Investor behavioural profile usage:
-  You may use the behavioural profile as a PRIOR for what this investor tends to vote AGAINST,
-  especially when the written policy is vague or incomplete. However, do NOT override an explicit
-  policy rule with the profile. If there is a conflict, the explicit policy rule takes precedence.
-
-- You MUST NOT claim a feature exists unless it is explicitly present in the facts JSON.
-  Treat null as "unknown / not evidenced". Do not assume typical governance features exist.
-
-- Treat the investor policy as a set of rules or principles. Examples of rules:
-    • "Vote AGAINST if dilution exceeds 10%."
-    • "Vote AGAINST where CEO bonus opportunity exceeds 100% of salary."
-    • "Expect at least 20% of variable pay to be linked to ESG metrics."
-    • "Expect meaningful clawback and malus provisions."
-    • "Remuneration should reward success / align with performance."
-
-- Use the structured JSON fields whenever relevant, for example:
-    • ceo_target_bonus_pct_of_salary
-    • ceo_max_bonus_pct_of_salary
-    • ceo_ltip_max_pct_of_salary
-    • ceo_salary_increase_pct
-    • workforce_salary_increase_pct
-    • total_dilution_pct
-    • ltip_dilution_pct
-    • stip_dilution_pct
-    • dilution_policy_limit_pct
-    • sti_total_esg_weight_pct
-    • ltip_total_esg_weight_pct
-    • esg_metrics_incentives_present
-    • clawback_provision
-    • malus_provision
-    • post_cessation_holding_years
-    • shareholding_requirement_ceo
-
-- The facts JSON may include a "financial_performance" object (e.g., eps_change_pct,
-  profit_attributable_change_pct). You may use this ONLY if:
-    (a) the investor policy indicates pay-for-performance principles OR
-    (b) the behavioural profile suggests the investor is pay-for-performance sensitive.
-
-- Note: ceo_ltip_max_pct_of_salary represents maximum opportunity (not necessarily paid outcome).
-  Do not vote AGAINST solely on high opportunity unless policy/profile and financial deterioration support it.
-
-- Pay-for-performance override (STRICT + GATED):
-  You may apply this override ONLY if OVERRIDE_FLAGS.pay_for_performance_override_allowed is true.
-
-  If the override is allowed AND
-     (financial_performance.eps_change_pct <= -10 OR financial_performance.profit_attributable_change_pct <= -10) AND
-     (ceo_ltip_max_pct_of_salary >= 500 OR ceo_max_bonus_pct_of_salary >= 150),
-  then vote AGAINST unless the facts explicitly show reduced awards or strong justification.
-
-- Always do correct numeric comparisons. For example:
-    • 12.5 > 10
-    • 10 is NOT greater than 10, but it meets an "at least 10%" threshold.
-    • If a rule is "no more than 2x salary" and the fact is 3x, that breaches the rule.
-
-- If important data required by a policy rule is missing (null in the JSON),
-  you MUST:
-    (a) add a key_violations entry like "Missing data: <fieldname>"
-    (b) reduce confidence (generally <= 0.45)
-  You may still vote FOR or AGAINST depending on what the policy implies about insufficient disclosure,
-  but you must not treat missing data as evidence of compliance.
-
-- If the policy clearly implies an AGAINST given the available facts, vote "AGAINST".
-  Otherwise vote "FOR", but do not overstate certainty when key fields are missing.
-
 Return a STRICT JSON object with exactly these fields:
   - vote: "FOR" or "AGAINST"
   - reason: 1–3 sentences explaining which policy rule(s) and fact(s) drove the decision.
   - confidence: a number between 0 and 1 (float).
   - key_violations: a list of short strings describing breaches or concerns
                     relative to the investor's policy (empty list if none).
+
+Be harsh in your votes.
 
 Do not include markdown. Do not include any other fields.
 """
@@ -134,7 +63,7 @@ def compute_pay_for_performance_override_allowed(policy_text: str, fingerprint: 
         return True
 
     # IMPORTANT: This assumes you added 'pay_for_performance_strong' in your fingerprint builder.
-    if fingerprint and fingerprint.get("pay_for_performance_strong") is True:
+    if fingerprint and fingerprint.get("pay_for_performance_sensitive") is True:
         return True
 
     return False
@@ -191,7 +120,7 @@ def judge_single_investor(
             {"role": "system", "content": JUDGE_SYSTEM_PROMPT},
             {"role": "user", "content": build_judge_user_prompt(policy_text, facts, fingerprint, override_flags)},
         ],
-        temperature=0.1,
+        temperature=1,
     )
 
     content = response.choices[0].message.content
